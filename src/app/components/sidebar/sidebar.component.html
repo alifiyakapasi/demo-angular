@@ -1,0 +1,46 @@
+<div class="sidebar" >
+  <ul>
+    <li routerLink="home" routerLinkActive="active">
+      <i class="bi bi-house-door-fill icon"></i><span class="text">Home</span>
+    </li>
+    <li routerLink="/about" routerLinkActive="active">
+      <i class="bi bi-folder-fill icon"></i><span class="text">About</span>
+    </li>
+    <li routerLink="/user" routerLinkActive="active">
+      <i class="bi bi-person-circle icon"></i><span class="text">User</span>
+    </li>
+    <li routerLink="/images" routerLinkActive="active">
+      <i class="bi bi-image icon"></i><span class="text">Images</span>
+    </li>
+    <li routerLink="/retry" routerLinkActive="active">
+      <i class="bi bi-image icon"></i><span class="text">Retry Loading</span>
+    </li>
+    <li routerLink="/combineLatest" routerLinkActive="active">
+      <i class="bi bi-image icon"></i><span class="text">CombineLatest</span>
+    </li>
+    <li routerLink="/table" routerLinkActive="active">
+      <i class="bi bi-boxes icon"></i><span class="text">Table Grid</span>
+    </li>
+    <li routerLink="/settings" routerLinkActive="active">
+      <i class="bi bi-gear-fill icon"></i><span class="text">Settings</span>
+    </li>
+    <mat-expansion-panel class="sidebar-item" #panel>
+      <mat-expansion-panel-header [ngClass]="{'active-panel-title': isActive}">
+        <mat-panel-title >
+          <i class="bi bi-boxes icon"></i><span class="text">Widgets</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <mat-list-item routerLink="/widgets/widget1" routerLinkActive="active">
+          <span>Widget 1</span>
+        </mat-list-item>
+        <mat-list-item routerLink="/widgets/widget2" routerLinkActive="active">
+          <span>Widget 2</span>
+        </mat-list-item>
+        <mat-list-item routerLink="/widgets/widget3" routerLinkActive="active">
+          <span>Widget 3</span>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-expansion-panel>
+  </ul>
+</div>

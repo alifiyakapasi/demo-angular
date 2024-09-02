@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <button class="toggle-btn" (click)="toggleSidebar()">☰</button>
+  <div class="app-text">My Application</div>
+
+  <button mat-button [matMenuTriggerFor]="matMenu">
+    <img class="avatar" src="app/assets/images/logo.png" alt="">
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
+
+  <mat-menu #matMenu="matMenu">
+      <div class="upper-profile mat-typography" >
+      <img class="big-avatar" src="app/assets/images/logo.png" alt="">
+      <span fxLayout="column" class="info-block">
+        <span>User Profile</span>
+      </span>
+    </div>
+    <button mat-menu-item>
+      <mat-icon>desktop_windows</mat-icon>
+      My Profile
+    </button>
+    <button mat-menu-item>
+      <mat-icon>exit_to_app</mat-icon>
+      Sign Out
+    </button>
+  </mat-menu>
+</nav>

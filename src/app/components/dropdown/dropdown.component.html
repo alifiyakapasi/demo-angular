@@ -1,0 +1,72 @@
+<form class="example-form">
+    <mat-form-field class="width">
+      <mat-label>Product</mat-label>
+      <input
+        type="text"
+        placeholder="Pick any Post"
+        aria-label="Product"
+        matInput
+        [formControl]="myControl"
+        [matAutocomplete]="auto"
+      />
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let post of filteredPosts$ | async" [value]="post">
+          {{ post.title }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+
+
+<div class="dropdown-main">
+    <div class="dropdown-container">
+        <label for="post" class="dropdown-label">Select a Post:</label>
+        <select id="post" class="dropdown dropdown-post" [(ngModel)]="selectedPostId" (ngModelChange)="onPostSelect($event)">
+            <option value="" disabled selected>Select a Post</option>
+            <option *ngFor="let post of (posts$ | async)" [value]="post.id">
+                {{ post.id }} : {{ post.title }}
+            </option>
+        </select>
+    </div>
+    
+    <div class="dropdown-container">
+        <label for="comments" class="dropdown-label">Comments for Selected Post:</label>
+        <select id="comments" class="dropdown dropdown-comments" [(ngModel)]="selectedCommentId" (ngModelChange)="onCommentSelect($event)">
+            <option value="" disabled selected>Select a Comment</option>
+            <option *ngFor="let comment of (comments$ | async)" [value]="comment.id">
+                {{ comment.id }} : {{ comment.name }}
+            </option>
+        </select>
+    </div>
+</div>
+
+
+
+<div class="content-container">
+    <h6 class="title">With MergeMap</h6>
+    <label for="postSelect" class="dropdown-label">Select Post ID:</label>
+    <select id="postSelect" class="merge-dropdown" (change)="onPostIdChange($event)">
+        <option *ngFor="let id of postIds" [value]="id">{{ id }}</option>
+    </select>
+    
+    <div *ngIf="post" class="post-details">
+        <h5 class="post-title">{{ post.title }}</h5>
+        <p class="post-body">{{ post.body }}</p>
+    </div>
+    
+    <div *ngIf="comments.length > 0" class="comments-section">
+        <h6 class="comments-title">Comments:</h6>
+        <ul class="comments-list">
+            <li *ngFor="let comment of comments" class="comment-item">
+                <strong class="comment-author">{{ comment.name }}</strong>
+                <p class="comment-body">{{ comment.body }}</p>
+            </li>
+        </ul>
+    </div>
+    
+    <div *ngIf="error" class="error-message">
+        <p>Error loading data. Please try again later.</p>
+    </div>
+</div>
+
+  

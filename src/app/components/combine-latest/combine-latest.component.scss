@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.error-container {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 1em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.error-message {
+    color: #721c24;
+    font-weight: bold;
+}
+
+.data-container {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.post-details {
+    margin-bottom: 0.5em;
+}
+
+.post-details p {
+    margin: 0.5em 0;
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-item {
+    background-color: #ffffff;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.comment-item p {
+    margin: 0;
+}
+
+.loading-container {
+    text-align: center;
+    font-style: italic;
+}

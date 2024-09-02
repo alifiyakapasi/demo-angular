@@ -1,0 +1,79 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #303f9f;
+  color: white;
+  padding: 5px 15px;
+  justify-content: space-between;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+.app-text {
+  font-size: 22px;
+  // font-weight: bold;
+}
+
+.icon {
+  font-size: 28px;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #ff4081;
+}
+
+.upper-profile{
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.big-avatar {
+  height: 70px;
+  // width: 70px;
+  border-radius: 50%;
+  margin: 10px;
+  border: solid rgb(185, 185, 185) 2px;
+}
+mat-icon{
+  color: #ffffff;
+}
+
+// button {
+//   height: 45px;
+//   width: 90px;
+// }
+
+// .email {
+//   font-size: 10px;
+// }
+
+// mat-menu-item {
+//   color: rgb(99, 99, 99);
+//   font-weight: 500;
+//   font-size: 15px;
+// }
+
+.info-block {
+  margin-right: 25px;
+}

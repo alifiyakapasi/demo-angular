@@ -1,0 +1,47 @@
+.main {
+  display: flex;
+  gap: 2rem;
+}
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('../../assets/images/logo.png');
+  background-size: cover;
+}
+
+.image {
+  height: 200px;
+  width: 300px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 16px;
+}
+
+.card-actions button {
+  font-size: 15px;
+  border-radius: 4px;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  background-color: transparent;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.card-actions button:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+  border-color: #ff0000;
+  transform: scale(1.05);
+}
+
+.card-actions button:focus {
+  outline: 2px solid #ff0000;
+  outline-offset: 2px;
+}

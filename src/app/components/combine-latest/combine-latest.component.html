@@ -1,0 +1,24 @@
+<style>
+
+</style>
+<div *ngIf="error" class="error-container">
+    <p class="error-message">{{ error }}</p>
+</div>
+<div *ngIf="!combinedData && !error" class="loading-container">
+    <p>Loading data...</p>
+</div>
+<div *ngIf="combinedData" class="data-container">
+    <h2 class="section-title">Post Data:</h2>
+    <div class="post-details">
+        <p><strong>ID:</strong> {{ combinedData.post.id }}</p>
+        <p><strong>Title:</strong> {{ combinedData.post.title }}</p>
+    </div>
+
+    <h2 class="section-title">Comments:</h2>
+    <ul class="comments-list">
+        <li *ngFor="let comment of combinedData.comments" class="comment-item">
+            <p><strong>ID:</strong> {{ comment.id }}</p>
+            <p><strong>Name:</strong> {{ comment.name }}</p>
+        </li>
+    </ul>
+</div>

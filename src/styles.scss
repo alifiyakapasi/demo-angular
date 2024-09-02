@@ -1,0 +1,33 @@
+// // // @import 'theme';
+// @use '@angular/material' as mat;
+// // @import '~@angular/material/core/theming';
+// @include mat.core();
+// $theme: mat.define-theme((
+  
+//   color: (
+//     theme-type: light,
+//     primary: mat.$azure-palette,
+//   ),
+//   typography: (
+//     brand-family: 'Comic Sans',
+//     bold-weight: 900
+//   ),
+//   density: (
+//     scale: -1
+//   )
+// ));
+// :root {
+//   @include mat.all-component-themes($theme);
+// }
+// html { height: 100%; 
+//   // @include mat.all-component-themes($theme); 
+//   @include mat.core-theme($theme);
+//   @include mat.button-theme($theme);
+// }
+  
+ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// // .example-radio-button{
+// //   // $example-radio-button-primary :  mat-palette($green-palette);
+// //   @include mat.radio-color($theme, $color-variant: error);
+// // }

@@ -1,0 +1,20 @@
+<div class="container">
+    <div>
+        <label for="album">Select Album:</label>
+        <select id="album" (change)="onAlbumChange($event)">
+            <option value="" disabled selected>Select an album</option>
+            <option *ngFor="let album of (albums$ | async)" [value]="album.id">
+                {{ album.id }} : {{ album.title }}
+            </option>
+        </select>
+    </div>
+
+    <div>
+        <ul>
+            <li *ngFor="let photo of (photos$ | async)">
+                <img [src]="photo.thumbnailUrl" [alt]="photo.title" />
+                <p>{{ photo.id }} : {{ photo.title }}</p>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" class="form">
+  <div class="container overflow-hidden">
+    <div class="row mb-5">
+      <div class="col-md-4">
+        <label for="name">Product:</label>
+        <select name="product" class="form-select" aria-label="Default select example"
+          [disabled]="!(posts$ | async)?.length" (change)="productChange($event)">
+          <option *ngFor="let post of posts$ | async" [value]="post.id">
+            {{ post.title }}
+          </option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label for="name">Comment:</label>
+        <select name="comment" class="form-select" aria-label="Default select example" [(ngModel)]="selectedCommentId"
+          [disabled]="!(comment$ | async)?.length">
+          <option *ngFor="let comment of comment$ | async" [value]="comment.id">
+            {{ comment.email }}
+          </option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <button type="submit" class="btn btn-primary" style="margin-top: 25px">
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2" *ngFor="let comment of comment$ | async">
+        <div class="card">
+          <div class="card-body">{{ comment.body }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

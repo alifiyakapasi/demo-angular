@@ -1,0 +1,12 @@
+  
+   <div *ngIf="error">
+    <p>{{ error }}</p>
+  </div>
+  <div *ngIf="data">
+    <h2>Data:</h2>
+    <pre>{{ data | json }}</pre>
+  </div>
+  <div *ngIf="!data && !error">
+    Loading data...
+  </div>
+  
